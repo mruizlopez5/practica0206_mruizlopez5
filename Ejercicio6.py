@@ -22,9 +22,12 @@ Terminar el programa.
 """
 
 while True:
+    
     z=True
     alumnos={}
     aprobados={}
+
+
     def añadir_alumno():
         x = input("introduce nif de alumno: ")
         nif=x
@@ -43,19 +46,23 @@ while True:
         print("Alumno Añadido a la base\n")
         return
         
+
     def eliminar_alumno():
         del alumnos[input("introduce nif del alumno a eliminar: ")]
         print("Alumno eliminado\n")
         return
+
 
     def mostrar_alumno():
         print(alumnos[input("introduce nif del alumno a mostrar: ")])
         print()
         return
 
+
     def listado_alumnado():
         print(alumnos,"\n")
         return
+
 
     def listado_aprobado():
         for payo in alumnos:
@@ -63,9 +70,9 @@ while True:
                 aprobados[payo]=alumnos[payo]
         print(aprobados,"\n")
         
-        
-        print()
+
     while z == True:
+
         seleccion = input("""introduzca una opcion:
             1 Añadir alumno/a. 
             2 Eliminar alumno/a. 
@@ -90,5 +97,3 @@ while True:
             z=False
         else:
             ""
-
-
